@@ -1,0 +1,36 @@
+{
+  "name": "mite2azn",
+  "version": "1.0.0",
+  "description": "Convert mite time entries exported to CSV to a CSV format readable by AZN of DB Systel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing mocha --reporter=dot --timeout=1350 test/\\*.js",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderbyheart/mite2azn.git"
+  },
+  "keywords": [
+    "mite",
+    "azn",
+    "time",
+    "tracking",
+    "conversion",
+    "csv"
+  ],
+  "author": "Markus Tacker <m@coderbyheart.com> | https://coderbyheart.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderbyheart/mite2azn/issues"
+  },
+  "homepage": "https://github.com/coderbyheart/mite2azn#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "chai": "^3.5.0",
+    "d3-dsv": "^1.0.3",
+    "lodash": "^4.16.4",
+    "mocha": "^3.1.2",
+    "standard": "^8.4.0"
+  }
+}
