@@ -26,5 +26,13 @@ build/%.html: src/%.html
 
 build: $(htmlbuildfiles) $(jsbrowserified) ## Build for production environment
 
+debug: ## Print variables
+	@echo "jssrcfiles=$(jssrcfiles)"
+	@echo "jssrcbasenames=$(jssrcbasenames)"
+	@echo "jsbrowserified=$(jsbrowserified)"
+	@echo "htmlsrcfiles=$(htmlsrcfiles)"
+	@echo "htmlsrcbasenames=$(htmlsrcbasenames)"
+	@echo "htmlbuildfiles=$(htmlbuildfiles)"
+
 help: ## (default), display the list of make commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
