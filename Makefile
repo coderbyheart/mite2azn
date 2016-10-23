@@ -19,6 +19,7 @@ htmlbuildfiles := $(foreach f,$(htmlsrcbasenames),build/$(f).html)
 # HTML
 
 build/%.html: src/%.html
+	@mkdir -p $(dir $@)
 	cp $< $@
 
 # MAIN
