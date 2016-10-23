@@ -6,7 +6,7 @@ const Promise = require('bluebird')
 const fs = Promise.promisifyAll(require('fs'))
 const path = require('path')
 const expect = require('chai').expect
-const convert = require('../convert')
+const convert = require('../src/js/module/convert')
 
 describe('convert()', () => {
   it('should convert the input to correct output', () => Promise
