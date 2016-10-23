@@ -1,6 +1,6 @@
 'use strict'
 
-/* global describe, it, after */
+/* global describe, it */
 
 const Promise = require('bluebird')
 const fs = Promise.promisifyAll(require('fs'))

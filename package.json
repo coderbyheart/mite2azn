@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=testing mocha --reporter=dot --timeout=1350 test/\\*.js",
-    "lint": "standard"
+    "lint": "standard",
+    "precommit": "npm run lint && npm test",
+    "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
@@ -27,10 +29,14 @@
   "homepage": "https://github.com/coderbyheart/mite2azn#readme",
   "dependencies": {
     "bluebird": "^3.4.6",
-    "chai": "^3.5.0",
     "d3-dsv": "^1.0.3",
-    "lodash": "^4.16.4",
+    "lodash": "^4.16.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "husky": "^0.11.9",
     "mocha": "^3.1.2",
-    "standard": "^8.4.0"
+    "standard": "^8.4.0",
+    "validate-commit-msg": "^2.8.2"
   }
 }
