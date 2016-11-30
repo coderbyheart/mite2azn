@@ -27,7 +27,7 @@ const AZNRow = function (date, element, hours, comment) {
 AZNRow.prototype.export = function () {
   let comment = this.comment.replace(';', ',').replace('\r', ' ').replace('\n', ' ').replace(/ {2,}/, ' ')
   if (comment.length > 80) {
-    comment = comment.substr(0, 79) + '…'
+    comment = comment.substr(0, 78) + '…'
   }
   return {
     date: this.date,
