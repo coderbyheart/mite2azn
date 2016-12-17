@@ -1,6 +1,6 @@
 {
   "name": "mite2azn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert mite time entries exported to CSV to a CSV format readable by AZN of DB Systel.",
   "main": "index.js",
   "scripts": {
