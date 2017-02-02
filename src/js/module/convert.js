@@ -6,6 +6,8 @@ const _forEach = require('lodash/forEach')
 const _forIn = require('lodash/forIn')
 const _sortBy = require('lodash/sortBy')
 
+const maxlen = 67
+
 const parseHours = (value) => {
   return parseFloat(value.replace(',', '.'))
 }
@@ -26,8 +28,8 @@ const AZNRow = function (date, element, hours, comment) {
 
 AZNRow.prototype.export = function () {
   let comment = this.comment.replace(';', ',').replace('\r', ' ').replace('\n', ' ').replace(/ {2,}/, ' ')
-  if (comment.length > 80) {
-    comment = comment.substr(0, 77) + '...'
+  if (comment.length > maxlen) {
+    comment = comment.substr(0, maxlen - 3) + '...'
   }
   return {
     date: this.date,
